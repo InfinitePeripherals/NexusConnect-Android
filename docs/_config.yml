@@ -1,6 +1,6 @@
 # Build settings
 # Update this with your project's info
-title: "GitPages Document Template"
+title: "NexusConnect UHF SDK"
 remote_theme: pmarsceill/just-the-docs
 search_enabled: true
 logo: "/images/infinite-peripherals-logo.png"
@@ -36,7 +36,7 @@ search:
 # Update this with your project's info
 aux_links:
   "Infinite Peripherals Documentation":
-    - "https://github.com/InfinitePeripherals/GitPages-Document-Template"
+    - "https://github.com/InfinitePeripherals/NexusConnect-Android"
 aux_links_new_tab: false
 
 # Back to top link
@@ -44,4 +44,4 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 # Footer
-footer_content: "Copyright &copy; 2022 Infinite Peripherals Inc."
+footer_content: "Copyright &copy; 2025 Infinite Peripherals Inc."
