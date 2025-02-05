@@ -316,14 +316,22 @@ filter.offset = 32 // The offset in bit
 filter.length = 16 // The length of data to match, in bit
 filter.data = "AABB"
 
+// Write without password
 val result = nexusConnect.writeUHFTag(filter, NCUHFMemoryBankType.EPC, 2, 6, "E200421CABC0601509C86A4C")    // Returns boolean whether write success or not
+
+// Write with passord
+val result = nexusConnect.writeUHFTag(filter, NCUHFMemoryBankType.EPC, 2, 6, "E200421CABC0601509C86A4C", "12345678")    // Returns boolean whether write success or not
 ```
 
 Write to any tags without filtering
 ```java
 // Without filter
 // Will write to any detected tags
+// Write without passord
 val result = nexusConnect.writeUHFTag(null, NCUHFMemoryBankType.EPC, 2, 6, "E200421CABC0601509C86A4C")  // Returns boolean whether write success or not
+
+// Write with passord
+val result = nexusConnect.writeUHFTag(null, NCUHFMemoryBankType.EPC, 2, 6, "E200421CABC0601509C86A4C", "12345678")  // Returns boolean whether write success or not
 ```
 
 ## Device Info
