@@ -112,7 +112,7 @@ nexusConnect.setDeviceOperationListener(object : NCDeviceOperationListener {
 })
 ```
 
-### Barcodes Scanning
+### Barcodes
 #### Scan Barcodes
 Start barcode reader
 ```java
@@ -153,7 +153,7 @@ Retrieve current barcode scan mode
 val scanMode = nexusConnect.getBarcodeScanMode()
 ```
 
-### UHF Scanning
+### UHF
 #### Scan UHF Tags
 Start UHF tag reader
 ```java
@@ -302,6 +302,28 @@ nexusConnect.startTrackingUHFTag(context, tag, NCUHFMemoryBankType.EPC) { streng
 Stop tracking UHF tag
 ```java
 nexusConnect.stopTrackingTag()
+```
+
+#### Write UHF Tag
+The NexusConnect UHF device can write data to a specified memory bank of a UHF RFID Gen2 tag. This operation modifies the tag’s memory, such as EPC, TID, or User memory, using a defined offset and length. It supports both filtered writing (writing only to tags matching specific criteria) and unfiltered writing (writing to any detected tag).
+
+Write to any tags that are matched with filter
+```java
+// With filter
+val filter = NCUHFTagFilter()
+filter.bankType = NCUHFMemoryBankType.EPC
+filter.offset = 32 // The offset in bit
+filter.length = 16 // The length of data to match, in bit
+filter.data = "AABB"
+
+val result = nexusConnect.writeUHFTag(filter, NCUHFMemoryBankType.EPC, 2, 6, "E200421CABC0601509C86A4C")    // Returns boolean whether write success or not
+```
+
+Write to any tags without filtering
+```java
+// Without filter
+// Will write to any detected tags
+val result = nexusConnect.writeUHFTag(null, NCUHFMemoryBankType.EPC, 2, 6, "E200421CABC0601509C86A4C")  // Returns boolean whether write success or not
 ```
 
 ## Device Info
