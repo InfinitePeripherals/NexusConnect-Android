@@ -52,6 +52,11 @@ val nexusConnect = NexusConnectUHF
 nexusConnect.initialize(context, "IPCMobile developer key")
 ```
 
+Cleanup `NexusConnectUHF`
+```java
+nexusConnect.cleanup()
+```
+
 ### Discover and Connect Device
 Start discovering device
 ```java
