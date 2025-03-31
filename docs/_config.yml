@@ -35,7 +35,7 @@ search:
 # Aux links for the upper right navigation
 # Update this with your project's info
 aux_links:
-  "Infinite Peripherals Documentation":
+  "NexusConnectSDK-Android Github":
     - "https://github.com/InfinitePeripherals/NexusConnect-Android"
 aux_links_new_tab: false
 
