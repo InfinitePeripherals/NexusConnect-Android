@@ -1,6 +1,6 @@
 # NexusConnectSDK
 
-This repository contains the NexusConnectSDK, an Android library for integrating NexusConnect UHF devices.
+This repository contains the NexusConnectSDK documentation integrating NexusConnect UHF devices.
 
 ## Documentation
 
